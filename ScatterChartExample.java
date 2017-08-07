@@ -33,7 +33,7 @@ public class ScatterChartExample extends Application{
 
     }
 
-    public static void init(int size, String domain, String range, int tick, boolean populate, int rate){
+    public static void init(int size, String domain, String range, int tick, boolean populate, double rate){
 
         int x = Integer.valueOf(domain.split("-")[0]);
         int x2 = Integer.valueOf(domain.split("-")[1]);
@@ -136,7 +136,7 @@ public class ScatterChartExample extends Application{
 
         System.out.println("Input the Learning Rate. Suggested Value = 0.001");
 
-        int rate = s.nextInt();
+        double rate = s.nextInt();
 
         init(size, domain, range, tick, populate, rate);
 
