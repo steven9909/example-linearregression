@@ -136,7 +136,7 @@ public class ScatterChartExample extends Application{
 
         System.out.println("Input the Learning Rate. Suggested Value = 0.001");
 
-        double rate = s.nextInt();
+        double rate = s.nextDouble();
 
         init(size, domain, range, tick, populate, rate);
 
