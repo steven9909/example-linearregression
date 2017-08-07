@@ -22,6 +22,8 @@ public class ScatterChartExample extends Application{
 
     private static double[] xData;
     private static double[] yData;
+    
+    private static final int ITERATION = 1000;
 
     @Override
     public void start(Stage window){
@@ -87,6 +89,10 @@ public class ScatterChartExample extends Application{
         sc.getData().addAll(series);
 
         GradientDescent solve = new GradientDescent(size,rate,xData,yData);
+        
+        for(int i = 0; i < ITERATION; i++){
+            solve.solveTheta();
+        }
 
         double[] answer = solve.returnAnswer();
 
